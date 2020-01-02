@@ -1,0 +1,16 @@
+version: 2.0
+jobs:
+  build:
+    docker:
+      - image: circleci/node:11.9.0
+    steps:
+      - checkout
+      - run:
+          name: "Install ng CLI"
+          command: sudo npm install -g @angular/cli
+      - run:
+          name: Check current version of node
+          command: node -v
+      - run:
+          name: Build the project
+          command: ng build --prod
