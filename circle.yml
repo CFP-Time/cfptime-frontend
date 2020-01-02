@@ -11,9 +11,9 @@ jobs:
       - run:
           name: Check current version of node
           command: node -v
-          - run:
-            name: Install npm dependencies
-            command: npm install
+      - run:
+          name: Install npm dependencies
+          command: npm install
       - run:
           name: Build the project
           command: ng build --prod
