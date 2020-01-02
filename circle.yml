@@ -16,7 +16,7 @@ jobs:
           command: npm install
       - run:
           name: Build the project
-          command: ng build --prod
+          command: ng build --prod --aot
       - run:
           name: woot
           command: echo woot
