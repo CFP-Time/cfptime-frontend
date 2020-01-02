@@ -7,7 +7,7 @@ jobs:
       - checkout
       - run:
           name: "Install ng CLI"
-          command: sudo npm install -g @angular/cli
+          command: (echo y; echo y; echo y; echo y;) | sudo npm install -g @angular/cli
       - run:
           name: Check current version of node
           command: node -v
