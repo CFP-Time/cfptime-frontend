@@ -1,16 +1,61 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
+import { HomeComponent } from './home/home.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatTableModule, MatFormFieldModule, MatInputModule, MatToolbarModule, MatButtonModule, MatIconModule, MatDialogModule, MatPaginatorModule, MatSortModule, MatCardModule, MatSidenavModule } from '@angular/material';
+import { RouterModule, Routes } from '@angular/router';
+import { UpcomingComponent } from './upcoming/upcoming.component';
+import { CfpdetailsComponent } from './cfpdetails/cfpdetails.component';
+import { CfpFormComponent } from './cfp-form/cfp-form.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { ConferenceDetailsComponent } from './conference-details/conference-details.component';
+
+const appRoutes: Routes = [
+  { path: 'home', component: HomeComponent },
+  { path: 'upcoming', component: UpcomingComponent },
+  { path: 'cfps/:id', component: CfpdetailsComponent },
+  { path: 'conferences/:id', component: ConferenceDetailsComponent },
+  { path: '',
+    redirectTo: '/home',
+    pathMatch: 'full'
+  },
+  // { path: '**', component: PageNotFoundComponent }
+];
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent,
+    UpcomingComponent,
+    CfpdetailsComponent,
+    CfpFormComponent,
+    ConferenceDetailsComponent
   ],
   imports: [
-    BrowserModule
+    RouterModule.forRoot(
+      appRoutes,
+      { enableTracing: false } // <-- debugging purposes only
+    ),    
+    BrowserModule,
+    HttpClientModule,
+    BrowserAnimationsModule, 
+    MatTableModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatIconModule,
+    MatDialogModule,
+    MatPaginatorModule,
+    MatSortModule,
+    MatCardModule,
+    FlexLayoutModule,
+    MatSidenavModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [CfpFormComponent]
 })
 export class AppModule { }

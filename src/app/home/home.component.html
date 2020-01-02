@@ -1,0 +1,43 @@
+<h3 class="title">Call For Papers for Security Conferences</h3>
+
+<div class="container"> 
+    <mat-form-field>
+        <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+      </mat-form-field>
+    
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" matSort>
+    
+        <ng-container matColumnDef="name">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>
+          <td mat-cell *matCellDef="let element"><a href="/cfps/{{ element.id }}">{{element.name}}</a></td>
+        </ng-container>
+    
+        <ng-container matColumnDef="city">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> City </th>
+            <td mat-cell *matCellDef="let element"> {{element.city}} </td>
+        </ng-container>
+    
+        <ng-container matColumnDef="country">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Country </th>
+            <td mat-cell *matCellDef="let element"> {{element.country}} <span [className]="'flag-icon flag-icon-' + element.country | lowercase"></span></td>
+        </ng-container>
+    
+        <ng-container matColumnDef="cfp_deadline">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> End of CFP </th>
+            <td mat-cell *matCellDef="let element"> {{element.cfp_deadline | date:'medium' }} </td>
+        </ng-container>
+    
+        <ng-container matColumnDef="conf_start_date">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Conference Date </th>
+            <td mat-cell *matCellDef="let element"> {{element.conf_start_date | date:'medium' }} </td>
+        </ng-container>
+    
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+    <mat-paginator class="sort" [pageSizeOptions]="[25, 100]"></mat-paginator>
+</div>
+
+<!-- <button mat-fab color="primary" class="mine" (click)="openDialog()">
+    <mat-icon>add</mat-icon>
+  </button> -->
