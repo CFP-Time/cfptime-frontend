@@ -1,6 +1,7 @@
 version: 2.0
 jobs:
   build:
+    resource_class: medium
     docker:
       - image: circleci/node:11.9.0
     steps:
