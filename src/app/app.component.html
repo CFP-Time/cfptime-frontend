@@ -14,6 +14,7 @@
     <span class="example-spacer"></span>
     <div fxShow="true" fxHide.lt-md="true">
       <a  mat-button  routerLink="/home"  routerLinkActive="active">Home</a>
+      <a  mat-button  routerLink="/add">Submit a conference</a>
       <a  mat-button  routerLink="/upcoming">Upcoming Conferences</a>
       <a  mat-button  href="https://api.cfptime.org" target="_blank" rel="noopener">API</a>
       <a  mat-button  href="https://api.cfptime.org/calendars" target="_blank" rel="noopener"><mat-icon>calendar_today</mat-icon>&nbsp;Get your calendars!</a>
@@ -44,6 +45,7 @@
     <mat-sidenav color="primary" #sidenav fxLayout="column" mode="over"  opened="false" fxHide.gt-sm="true">
       <div fxLayout="column">
         <a  mat-button  routerLink="/home"  routerLinkActive="active">Home</a>
+        <a  mat-button  routerLink="/add">Submit a conference</a>
         <a  mat-button  routerLink="/upcoming">Upcoming Conferences</a>
         <a  mat-button  href="https://api.cfptime.org">API</a>
         <a  mat-button  href="https://api.cfptime.org/calendars"><mat-icon>calendar_today</mat-icon>&nbsp;Get your calendars!</a>

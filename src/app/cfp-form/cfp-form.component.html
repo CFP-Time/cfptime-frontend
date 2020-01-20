@@ -1,18 +1,144 @@
-<h2 mat-dialog-title>Woot woot!</h2>
 
-<!-- [formGroup]="form" -->
-<mat-dialog-content>
-  
-    <mat-form-field>
-        <input matInput
-                placeholder="Course Description"
-               formControlName="description">
+
+<div class="container">
+  <h5>A CFP is missing? Feel free to submit it!</h5>
+  <form [formGroup]="flagForm">
+    <p>
+        <mat-form-field appearance="legacy">
+          <mat-label>Conference Name</mat-label>
+          <input matInput required placeholder="Name of the conference, eg. CFP Time" formControlName="name">
+          <mat-icon matSuffix>announcement</mat-icon>
+          <mat-hint>Input the fully qualified conference name</mat-hint>
+          <mat-error>Woot, your conference does not have a name?</mat-error>
+        </mat-form-field>
+      </p>
+
+      <p>
+        <mat-form-field>
+            <input matInput required [matDatepicker]="picker" placeholder="CFP Deadline" formControlName="cfp_deadline">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+            <mat-hint>Enter the date when the CFP finishes.</mat-hint>
+            <mat-error>Woot, you don't know when the CFP ends?</mat-error>
+        </mat-form-field>
+      </p>
+
+
+      <p>
+        <mat-form-field>
+            <input matInput required [matDatepicker]="woot" placeholder="When does the conference start?" formControlName="conf_start_date">
+            <mat-datepicker-toggle matSuffix [for]="woot"></mat-datepicker-toggle>
+            <mat-datepicker #woot></mat-datepicker>
+            <mat-hint>Enter the date when the Conference starts</mat-hint>
+            <mat-error>Woot, you don't know when the conference is starting?</mat-error>
+        </mat-form-field>
+      </p>
+
+
+      <p>
+        <mat-form-field appearance="legacy">
+          <!-- <mat-icon matSuffix>timelapse</mat-icon> -->
+          <mat-label>Conference duration</mat-label>
+          <select matNativeControl required formControlName="number_of_days" >
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7+</option>
+          </select>
+          
+          <mat-hint>Enter the number of days the conference lasts (eg. 1)</mat-hint>
+          <mat-error>The duration field is required.</mat-error>
+        </mat-form-field>
+      </p>
+      
+
+      <p>
+        <mat-form-field>
+          <mat-label>Country</mat-label>
+          <select matNativeControl required formControlName="country" >
+            <option *ngFor="let country of countries" [value]="country.code">
+              {{country.name}}
+            </option>
+          </select>
+          <mat-hint>Enter the Country of the conference</mat-hint>
+          <mat-error>The country field is required. Is the conference not happening on Earth? Elon? Is that you?</mat-error>
+        </mat-form-field>
+      </p>
+
+      <p>
+        <mat-form-field appearance="legacy">
+          <mat-label>City</mat-label>
+          <input matInput required placeholder="Conference City" formControlName="city">
+          <mat-icon matSuffix>location_city</mat-icon>
+          <mat-hint>Enter the name of the city where the conference takes place in</mat-hint>
+          <mat-error>The city field is required. Fill with 'N/A' if not applicable.</mat-error>
+        </mat-form-field>
+      </p>
+
+      <p>
+        <mat-form-field appearance="legacy">
+          <mat-label>Province</mat-label>
+          <input matInput required placeholder="Conference Province" formControlName="province">
+          <mat-icon matSuffix>location_city</mat-icon>
+          <mat-hint>Enter the name of the province where the conference takes place in.</mat-hint>
+          <mat-error>The province field is required. Fill with 'N/A' if not applicable.</mat-error>
+        </mat-form-field>
+      </p>
+
+      <p>
+        <mat-form-field appearance="legacy">
+          <mat-label>Twitter</mat-label>
+          <input matInput required placeholder="Twitter eg. @CFP_Time" formControlName="twitter">
+          <mat-icon matSuffix>account_circle</mat-icon>
+          <mat-error>Your handle needs to start with '@' (eg. @CFP_Time). Fill with 'N/A' if not applicable.</mat-error>
+          <mat-hint>Enter your twitter handle such as @CFP_Time. Fill with 'N/A' if not applicable.</mat-hint>
+        </mat-form-field>
+      </p>
+
+      <p>
+        <mat-form-field appearance="legacy">
+          <mat-label>Website</mat-label>
+          <input matInput required placeholder="Conference Website, eg. https://cfptime.org" formControlName="website">
+          <mat-icon matSuffix>link</mat-icon>
+          <mat-hint>Enter your conference website (eg. https://cfptime.org/). Fill with 'N/A' if not applicable.</mat-hint>
+          <mat-error>Your URL needs to start with http(s)://yourdomain.com. Fill with 'N/A' if not applicable.</mat-error>
+        </mat-form-field>
+      </p>
+
+      <p>
+        <mat-form-field appearance="legacy">
+          <mat-label>Code of conduct</mat-label>
+          <input matInput required placeholder="Code of Conduct URL, eg. https://cfptime.org/code_of_conduct" formControlName="code_of_conduct">
+          <mat-icon matSuffix>link</mat-icon>
+          <mat-hint>Enter your conference code of conduct (eg. https://cfptime.org/code_of_conduct). Fill with 'N/A' if not applicable.</mat-hint>
+          <mat-error>Your URL needs to start with http(s)://yourdomain.com. Fill with 'N/A' if not applicable.</mat-error>
+        </mat-form-field>
+    </p>
+    
+    <p>
+      <mat-form-field appearance="legacy">
+        <mat-label>CFP Details</mat-label>
+        <textarea matInput required cdkTextareaAutosize placeholder="CFP Details" formControlName="cfp_details" maxlength="5000"></textarea>
+        <mat-icon matSuffix>textsms</mat-icon>
+        <mat-hint>Enter your CFP Details (max 5000 characters)</mat-hint>
+      </mat-form-field>
+  </p>
+
+  <p>
+    <mat-form-field appearance="legacy">
+      <mat-label>Speaker Benefits</mat-label>
+      <textarea matInput required cdkTextareaAutosize placeholder="Speaker Benefits" formControlName="speaker_benefits" maxlength="5000"></textarea>
+      <mat-icon matSuffix>textsms</mat-icon>
+      <mat-hint>Enter your Speaker Benefits (max 5000 characters). Fill with 'N/A' if not applicable.</mat-hint>
     </mat-form-field>
-      ....
- 
-</mat-dialog-content>
+</p>
 
-<mat-dialog-actions>
-    <button class="mat-raised-button"(click)="close()">Close</button>
-    <button class="mat-raised-button mat-primary"(click)="save()">Save</button>
-</mat-dialog-actions>
+
+    <button mat-raised-button type="submit" color="primary" (click)="submit()" [disabled]="!flagForm.valid">SUBMIT</button>
+    <br />
+    <br />
+  </form>
+</div>

@@ -58,10 +58,11 @@ export class HomeComponent implements OnInit {
   }
 
   openDialog() {
-    const dialogConfig = new MatDialogConfig();
-    dialogConfig.disableClose = true;
-    dialogConfig.autoFocus = true;
-    this.dialog.open(CfpFormComponent, dialogConfig);
+    window.location.href = '/add';
+    // const dialogConfig = new MatDialogConfig();
+    // dialogConfig.disableClose = true;
+    // dialogConfig.autoFocus = true;
+    // this.dialog.open(CfpFormComponent, dialogConfig);
 }
 
 }

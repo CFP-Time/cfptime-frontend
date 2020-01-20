@@ -39,4 +39,9 @@ export class CfptimeService {
     var tmpUrl = this.url + '/api/conferences/' + cfpId + '/';
     return this.http.get<CFPData>(tmpUrl);
   }
+
+  postNewConference(data) {
+    var tmpUrl = this.url + '/api/cfps/';
+    return this.http.post(tmpUrl, data);
+  }
 }
