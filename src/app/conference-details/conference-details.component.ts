@@ -40,6 +40,9 @@ export class ConferenceDetailsComponent implements OnInit {
   ngOnInit() {
     this.cfpId = this.routeParams.id;
     this.api.getConferenceDetails(this.cfpId).subscribe(data => {
+      if (!data['website'].includes('http') && data['website'] != 'N\A'){
+        data['website'] = 'http://' + data['website'];
+      }
       this.details = data;
       console.log(data);
     });

@@ -14,10 +14,11 @@
     <span class="example-spacer"></span>
     <div fxShow="true" fxHide.lt-md="true">
       <a  mat-button  routerLink="/home"  routerLinkActive="active">Home</a>
-      <a  mat-button  routerLink="/add">Submit a conference</a>
-      <a  mat-button  routerLink="/upcoming">Upcoming Conferences</a>
+      <a  mat-button  href="https://ko-fi.com/U6U5DE89" target="_blank" rel="noopener" style="color: gold;"><mat-icon>grade</mat-icon>&nbsp;&nbsp;Support us!</a>
+      <a  mat-button  routerLink="/add"><mat-icon>add_to_queue</mat-icon>&nbsp;&nbsp;Submit a conference</a>
+      <a  mat-button  routerLink="/upcoming"><mat-icon>calendar_today</mat-icon>&nbsp;&nbsp;Upcoming Conferences</a>
+      <a  mat-button  href="https://api.cfptime.org/calendars" target="_blank" rel="noopener"><mat-icon>bookmark</mat-icon>&nbsp;Get your calendars!</a>
       <a  mat-button  href="https://api.cfptime.org" target="_blank" rel="noopener">API</a>
-      <a  mat-button  href="https://api.cfptime.org/calendars" target="_blank" rel="noopener"><mat-icon>calendar_today</mat-icon>&nbsp;Get your calendars!</a>
       <a  mat-button  href="https://twitter.com/cfp_time" target="_blank" rel="noopener">Follow us on </a>
       <a aria-label="CFP Time on twitter" target="_blank" rel="noopener" href="https://twitter.com/cfp_time" title="Twitter">
         <svg id="twitter-logo" height="24" data-name="Logo — FIXED" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
@@ -45,9 +46,11 @@
     <mat-sidenav color="primary" #sidenav fxLayout="column" mode="over"  opened="false" fxHide.gt-sm="true">
       <div fxLayout="column">
         <a  mat-button  routerLink="/home"  routerLinkActive="active">Home</a>
-        <a  mat-button  routerLink="/add">Submit a conference</a>
-        <a  mat-button  routerLink="/upcoming">Upcoming Conferences</a>
-        <a  mat-button  href="https://api.cfptime.org">API</a>
+        <a  mat-button  href="https://ko-fi.com/U6U5DE89" target="_blank" rel="noopener" style="color: gold;"><mat-icon>grade</mat-icon>&nbsp;&nbsp;Support us!</a>
+        <a  mat-button  routerLink="/add"><mat-icon>add_to_queue</mat-icon>&nbsp;&nbsp;Submit a conference</a>
+        <a  mat-button  routerLink="/upcoming"><mat-icon>calendar_today</mat-icon>&nbsp;&nbsp;Upcoming Conferences</a>
+        <a  mat-button  href="https://api.cfptime.org/calendars" target="_blank" rel="noopener"><mat-icon>bookmark</mat-icon>&nbsp;Get your calendars!</a>
+        <a  mat-button  href="https://api.cfptime.org" target="_blank" rel="noopener">API</a>  
         <a  mat-button  href="https://api.cfptime.org/calendars"><mat-icon>calendar_today</mat-icon>&nbsp;Get your calendars!</a>
         <a  mat-button  href="https://twitter.com/cfp_time">Follow us on Twitter :)</a>
       </div>
@@ -57,6 +60,8 @@
     </mat-sidenav-content>
   </mat-sidenav-container>
 </div>
+
+
 
   <!-- <div class="toolbar" role="banner">
     <a href="/home"><img
