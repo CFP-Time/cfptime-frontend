@@ -26,6 +26,9 @@ const appRoutes: Routes = [
     pathMatch: 'full'
   },
   // { path: '**', component: PageNotFoundComponent }
+  { path: '**',
+    redirectTo: '/home',
+  }
 ];
 
 @NgModule({
