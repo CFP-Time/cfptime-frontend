@@ -14,6 +14,7 @@ import { ConferenceDetailsComponent } from './conference-details/conference-deta
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SubmitDialogComponent } from './submit-dialog/submit-dialog.component';
 import { ErrorDialogComponent } from './error-dialog/error-dialog.component';
+import { SponsorDialogComponent } from './sponsor-dialog/sponsor-dialog.component';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -40,7 +41,8 @@ const appRoutes: Routes = [
     CfpFormComponent,
     ConferenceDetailsComponent,
     SubmitDialogComponent,
-    ErrorDialogComponent
+    ErrorDialogComponent,
+    SponsorDialogComponent
   ],
   imports: [
     RouterModule.forRoot(
@@ -68,8 +70,8 @@ const appRoutes: Routes = [
     MatSelectModule,
     ReactiveFormsModule,
   ],
-  providers: [SubmitDialogComponent, ErrorDialogComponent],
+  providers: [SubmitDialogComponent, ErrorDialogComponent, SponsorDialogComponent],
   bootstrap: [AppComponent],
-  entryComponents: [CfpFormComponent, SubmitDialogComponent, ErrorDialogComponent]
+  entryComponents: [CfpFormComponent, SubmitDialogComponent, ErrorDialogComponent, SponsorDialogComponent]
 })
 export class AppModule { }

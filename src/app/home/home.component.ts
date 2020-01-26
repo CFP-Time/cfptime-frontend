@@ -5,6 +5,7 @@ import { MatDialog, MatDialogConfig } from "@angular/material";
 import { CfpFormComponent } from '../cfp-form/cfp-form.component';
 import {MatPaginator} from '@angular/material/paginator';
 import {MatSort} from '@angular/material/sort';
+import { SponsorDialogComponent } from '../sponsor-dialog/sponsor-dialog.component';
 
 export interface CFPData {
   id: number;
@@ -35,7 +36,7 @@ export class HomeComponent implements OnInit {
   @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
   @ViewChild(MatSort, {static: true}) sort: MatSort;
 
-  constructor(private api: CfptimeService, private dialog: MatDialog) {
+  constructor(private api: CfptimeService, private sponsorDialog: SponsorDialogComponent) {
   }
 
   applyFilter(filterValue: string) {
@@ -47,6 +48,10 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {
+
+    // localStorage.clear();
+    this.sponsorDialog.openDialog();
+
     this.api.getCFPs().subscribe(data => {
       this.cfps = data;
       this.dataSource = new MatTableDataSource(data);
