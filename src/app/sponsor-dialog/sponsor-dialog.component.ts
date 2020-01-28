@@ -15,7 +15,7 @@ export class SponsorDialogComponent implements OnInit {
       return;
     } else {
       const dialogRef = this.dialog.open(SponsorDialogComponent, {
-        width: '30%',
+        //width: '30%',
         data: {}
       });
   
