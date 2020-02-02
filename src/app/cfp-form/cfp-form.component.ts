@@ -91,7 +91,7 @@ export class CfpFormComponent implements OnInit {
     cfp_deadline = cfp_deadline + 'T23:13:37.017Z'
     // console.log(cfp_deadline);
 
-    let conf_start_date = this.formatDate(this.flagForm.get('cfp_deadline').value);
+    let conf_start_date = this.formatDate(this.flagForm.get('conf_start_date').value);
     conf_start_date = conf_start_date + 'T09:13:37.017Z'
     // console.log(conf_start_date);
 
