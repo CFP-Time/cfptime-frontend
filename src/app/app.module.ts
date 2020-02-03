@@ -4,7 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatTableModule, MatFormFieldModule, MatInputModule, MatToolbarModule, MatButtonModule, MatIconModule, MatDialogModule, MatPaginatorModule, MatSortModule, MatCardModule, MatSidenavModule, MatDatepickerModule, MatNativeDateModule, MatSelectModule } from '@angular/material';
+import { MatTableModule, MatFormFieldModule, MatInputModule, MatToolbarModule, MatButtonModule, MatIconModule, MatDialogModule, MatPaginatorModule, MatSortModule, MatCardModule, MatSidenavModule, MatDatepickerModule, MatNativeDateModule, MatSelectModule, MatSlideToggleModule } from '@angular/material';
 import { RouterModule, Routes } from '@angular/router';
 import { UpcomingComponent } from './upcoming/upcoming.component';
 import { CfpdetailsComponent } from './cfpdetails/cfpdetails.component';
@@ -15,6 +15,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SubmitDialogComponent } from './submit-dialog/submit-dialog.component';
 import { ErrorDialogComponent } from './error-dialog/error-dialog.component';
 import { SponsorDialogComponent } from './sponsor-dialog/sponsor-dialog.component';
+import { CfpNotFoundDialogComponent } from './cfp-not-found-dialog/cfp-not-found-dialog.component';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -42,7 +43,8 @@ const appRoutes: Routes = [
     ConferenceDetailsComponent,
     SubmitDialogComponent,
     ErrorDialogComponent,
-    SponsorDialogComponent
+    SponsorDialogComponent,
+    CfpNotFoundDialogComponent
   ],
   imports: [
     RouterModule.forRoot(
@@ -69,9 +71,10 @@ const appRoutes: Routes = [
     FormsModule,
     MatSelectModule,
     ReactiveFormsModule,
+    MatSlideToggleModule,
   ],
-  providers: [SubmitDialogComponent, ErrorDialogComponent, SponsorDialogComponent],
+  providers: [SubmitDialogComponent, ErrorDialogComponent, SponsorDialogComponent, CfpNotFoundDialogComponent],
   bootstrap: [AppComponent],
-  entryComponents: [CfpFormComponent, SubmitDialogComponent, ErrorDialogComponent, SponsorDialogComponent]
+  entryComponents: [CfpFormComponent, SubmitDialogComponent, ErrorDialogComponent, SponsorDialogComponent, CfpNotFoundDialogComponent]
 })
 export class AppModule { }

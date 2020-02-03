@@ -3,6 +3,7 @@ import { CfptimeService } from '../cfptime.service';
 import { CFPData } from '../home/home.component';
 import { ActivatedRoute, Params } from '@angular/router';
 import { SponsorDialogComponent } from '../sponsor-dialog/sponsor-dialog.component';
+import { CfpNotFoundDialogComponent } from '../cfp-not-found-dialog/cfp-not-found-dialog.component';
 
 @Component({
   selector: 'app-cfpdetails',
@@ -17,7 +18,7 @@ export class CfpdetailsComponent implements OnInit {
   // Query parameters found in the URL: /example-params/one/two?query1=one&query2=two
   queryParams: Params;
 
-  constructor(private api: CfptimeService, private activatedRoute: ActivatedRoute, private sponsorDialog: SponsorDialogComponent) {
+  constructor(private api: CfptimeService, private activatedRoute: ActivatedRoute, private sponsorDialog: SponsorDialogComponent, private cfpNotFound: CfpNotFoundDialogComponent) {
     this.getRouteParams();
   }
 
@@ -49,6 +50,10 @@ export class CfpdetailsComponent implements OnInit {
       }
       this.details = data;
       console.log(data);
+    },
+    error => {
+      console.log('error');
+      this.cfpNotFound.openDialog();
     });
   }
 }
