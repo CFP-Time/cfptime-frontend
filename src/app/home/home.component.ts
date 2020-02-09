@@ -14,6 +14,7 @@ export interface CFPData {
   country: string;
   cfp_deadline: Date;
   conf_start_date: Date;
+  created_at: Date;
   province: string;
   twitter: string;
   website: string;
@@ -31,7 +32,7 @@ export class HomeComponent implements OnInit {
 
   cfps: CFPData[];
   dataSource: any;
-  displayedColumns: string[] = ['name', 'city', 'country', 'cfp_deadline', 'conf_start_date']
+  displayedColumns: string[] = ['name', 'city', 'country', 'cfp_deadline', 'conf_start_date', 'created_at']
 
   @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
   @ViewChild(MatSort, {static: true}) sort: MatSort;
