@@ -24,12 +24,12 @@
     
         <ng-container matColumnDef="cfp_deadline">
             <th mat-header-cell *matHeaderCellDef mat-sort-header> End of CFP </th>
-            <td mat-cell *matCellDef="let element"> {{element.cfp_deadline | date:'medium' }} </td>
+            <td mat-cell *matCellDef="let element"> {{element.cfp_deadline | date }} </td>
         </ng-container>
     
         <ng-container matColumnDef="conf_start_date">
             <th mat-header-cell *matHeaderCellDef mat-sort-header> Conference Date </th>
-            <td mat-cell *matCellDef="let element"> {{element.conf_start_date | date:'medium' }} </td>
+            <td mat-cell *matCellDef="let element"> {{element.conf_start_date | date }} </td>
         </ng-container>
     
         <ng-container matColumnDef="created_at">
