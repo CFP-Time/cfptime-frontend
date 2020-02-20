@@ -1,5 +1,9 @@
 table {
+    // margin-left: 100px;
+    // margin-right: 50px;
     width: 100%;
+    margin-right: 100px;
+    // width: 50%;
 }
 
 .mat-form-field {
@@ -7,10 +11,14 @@ table {
     width: 10%;
 }
 
-.container {
+mat-form-field {
     margin-left: 10%;
-    margin-right: 10%;
 }
+
+// .container {
+//     // margin-left: 10%;
+//     margin-right:10% !important;
+// }
 
 .mine {
     position: fixed;
