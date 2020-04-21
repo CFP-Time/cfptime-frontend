@@ -34,9 +34,23 @@ export class SponsorDialogComponent implements OnInit {
     console.log(localStorage.getItem('SponsorDialog'));
     if (localStorage.getItem('SponsorDialog') == null) {
       localStorage.setItem('SponsorDialog', 'yes');
-      console.log('false but set it to yes')
       return false;
     } else {
+      var counter = localStorage.getItem('counter')
+      if (counter == null) {
+        localStorage.setItem('counter', '1');
+      } else {
+        var intCounter = parseInt(counter);
+        // show sponsor
+        if (intCounter == 5) {
+          localStorage.setItem('counter', '1');
+          return false;
+
+        }
+        // else increment the counter
+        intCounter = intCounter + 1;
+        localStorage.setItem('counter', intCounter.toString());
+      }
       // has already been shown
       console.log('true')
       return true;
