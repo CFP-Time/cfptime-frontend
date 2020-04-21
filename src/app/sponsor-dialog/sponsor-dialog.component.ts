@@ -30,31 +30,42 @@ export class SponsorDialogComponent implements OnInit {
     win.focus();
   }
 
+  _MS_PER_DAY = 1000 * 60 * 60 * 24;
+
+  // a and b are javascript Date objects
+  dateDiffInDays(a, b) {
+    // Discard the time and time-zone information.
+    const utc1 = Date.UTC(a.getFullYear(), a.getMonth(), a.getDate());
+    const utc2 = Date.UTC(b.getFullYear(), b.getMonth(), b.getDate());
+  
+    return Math.floor((utc2 - utc1) / this._MS_PER_DAY);
+  }  
+
   dialogHasBeenShown() {
-    console.log(localStorage.getItem('SponsorDialog'));
+    var now = new Date(Date.now());
+
     if (localStorage.getItem('SponsorDialog') == null) {
       localStorage.setItem('SponsorDialog', 'yes');
+      localStorage.setItem('date', now.toString());
       return false;
-    } else {
-      var counter = localStorage.getItem('counter')
-      if (counter == null) {
-        localStorage.setItem('counter', '1');
-      } else {
-        var intCounter = parseInt(counter);
-        // show sponsor
-        if (intCounter == 5) {
-          localStorage.setItem('counter', '1');
-          return false;
-
-        }
-        // else increment the counter
-        intCounter = intCounter + 1;
-        localStorage.setItem('counter', intCounter.toString());
-      }
-      // has already been shown
-      console.log('true')
-      return true;
     }
+    
+    console.log(localStorage.getItem('date'))
+    // have we already stored the date for the pop up show?
+    var stringDate = localStorage.getItem('date');
+    if (stringDate == null) {
+      localStorage.setItem('date', now.toString());
+      stringDate = new Date(Date.now()).toString();
+    }
+
+    var date = new Date(stringDate);
+    var dateDiff = this.dateDiffInDays(date, now)
+    console.log("Diff is : ", dateDiff);
+    if (dateDiff > 5) {
+      localStorage.setItem('date', now.toString());
+      return false;
+    } 
+    return true;
   }
 
   ngOnInit() {
