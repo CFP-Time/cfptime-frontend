@@ -6,7 +6,7 @@
     height: 30px;
     // margin-top: 5px;
 }
-  
+
 #twitter-logo:hover {
     opacity: 0.8;
 }
@@ -17,7 +17,7 @@
 }
 
 .mat-toolbar{
-  height: 7vh;
+    height: 7vh;
 }
 
 div {
@@ -25,7 +25,7 @@ div {
 }
 
 .mat-sidenav-container{
-  min-height: 93vh !important;
+    min-height: 93vh !important;
 }
 
 a{
@@ -40,13 +40,21 @@ button{
 
 .example-icon {
     padding: 0 14px;
-  }
+}
 
-  .example-spacer {
-    flex: 1 1 auto;
-  }
+.example-spacer {
+flex: 1 1 auto;
+}
 
-  .mat-sidenav-content{
-      font-size: 200%;
-      text-align: left;
-  }
+.mat-sidenav-content{
+    font-size: 200%;
+    text-align: left;
+}
+
+#btmFooter {
+align-self: flex-end;
+text-align: center;
+    mat-icon {
+        font-size: 100%;
+    }
+}
