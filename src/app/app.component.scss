@@ -54,7 +54,10 @@ flex: 1 1 auto;
 #btmFooter {
 align-self: flex-end;
 text-align: center;
+color: grey;
+margin-bottom: 10px;
     mat-icon {
         font-size: 100%;
+        color: red;
     }
 }
