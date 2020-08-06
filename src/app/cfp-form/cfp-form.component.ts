@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {MAT_DIALOG_DATA, MatDialogRef, ErrorStateMatcher} from "@angular/material";
+import {MAT_DIALOG_DATA, MatDialogRef} from "@angular/material/dialog";
 import { FormControl, Validators, FormGroup, FormBuilder, FormGroupDirective, NgForm } from '@angular/forms';
 import { CdkTextareaAutosize } from '@angular/cdk/text-field';
 import { ValidateUrl, ValidateTwitterHandle } from '../validators/validators';

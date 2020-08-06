@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { CfptimeService } from '../cfptime.service';
 import { MatTableDataSource } from '@angular/material/table';
-import { MatDialog, MatDialogConfig } from "@angular/material";
+import { MatDialog, MatDialogConfig } from "@angular/material/dialog";
 import { CfpFormComponent } from '../cfp-form/cfp-form.component';
 import {MatPaginator} from '@angular/material/paginator';
 import {MatSort} from '@angular/material/sort';
