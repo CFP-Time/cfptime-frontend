@@ -3,8 +3,8 @@ import { CfptimeService } from '../cfptime.service';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatDialog, MatDialogConfig } from "@angular/material";
 import { CfpFormComponent } from '../cfp-form/cfp-form.component';
-import {MatPaginator} from '@angular/material/paginator';
-import {MatSort} from '@angular/material/sort';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatSort } from '@angular/material/sort';
 import { SponsorDialogComponent } from '../sponsor-dialog/sponsor-dialog.component';
 
 export interface CFPData {
@@ -34,8 +34,8 @@ export class HomeComponent implements OnInit {
   dataSource: any;
   displayedColumns: string[] = ['name', 'city', 'country', 'cfp_deadline', 'conf_start_date', 'created_at']
 
-  @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
-  @ViewChild(MatSort, {static: true}) sort: MatSort;
+  @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
+  @ViewChild(MatSort, { static: true }) sort: MatSort;
 
   constructor(private api: CfptimeService, private sponsorDialog: SponsorDialogComponent) {
   }
@@ -63,12 +63,16 @@ export class HomeComponent implements OnInit {
     })
   }
 
+  support() {
+    window.location.href = 'https://ko-fi.com/U6U5DE89';
+  }
+
   openDialog() {
     window.location.href = '/add';
     // const dialogConfig = new MatDialogConfig();
     // dialogConfig.disableClose = true;
     // dialogConfig.autoFocus = true;
     // this.dialog.open(CfpFormComponent, dialogConfig);
-}
+  }
 
 }
