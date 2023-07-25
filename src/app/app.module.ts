@@ -34,7 +34,7 @@ import { SubmitDialogComponent } from './submit-dialog/submit-dialog.component';
 import { ErrorDialogComponent } from './error-dialog/error-dialog.component';
 import { SponsorDialogComponent } from './sponsor-dialog/sponsor-dialog.component';
 import { CfpNotFoundDialogComponent } from './cfp-not-found-dialog/cfp-not-found-dialog.component';
-import { SnowComponent } from './snow/snow.component';
+// import { SnowComponent } from './snow/snow.component';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -42,12 +42,14 @@ const appRoutes: Routes = [
   { path: 'add', component: CfpFormComponent },
   { path: 'cfps/:id', component: CfpdetailsComponent },
   { path: 'conferences/:id', component: ConferenceDetailsComponent },
-  { path: '',
+  {
+    path: '',
     redirectTo: '/home',
     pathMatch: 'full'
   },
   // { path: '**', component: PageNotFoundComponent }
-  { path: '**',
+  {
+    path: '**',
     redirectTo: '/home',
   }
 ];
@@ -64,16 +66,16 @@ const appRoutes: Routes = [
     ErrorDialogComponent,
     SponsorDialogComponent,
     CfpNotFoundDialogComponent,
-    SnowComponent
+    // SnowComponent
   ],
   imports: [
     RouterModule.forRoot(
       appRoutes,
       { enableTracing: false } // <-- debugging purposes only
-    ),    
+    ),
     BrowserModule,
     HttpClientModule,
-    BrowserAnimationsModule, 
+    BrowserAnimationsModule,
     MatTableModule,
     MatFormFieldModule,
     MatInputModule,
