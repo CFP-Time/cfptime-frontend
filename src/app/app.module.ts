@@ -34,6 +34,7 @@ import { SubmitDialogComponent } from './submit-dialog/submit-dialog.component';
 import { ErrorDialogComponent } from './error-dialog/error-dialog.component';
 import { SponsorDialogComponent } from './sponsor-dialog/sponsor-dialog.component';
 import { CfpNotFoundDialogComponent } from './cfp-not-found-dialog/cfp-not-found-dialog.component';
+import { SnowComponent } from './snow/snow.component';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -62,7 +63,8 @@ const appRoutes: Routes = [
     SubmitDialogComponent,
     ErrorDialogComponent,
     SponsorDialogComponent,
-    CfpNotFoundDialogComponent
+    CfpNotFoundDialogComponent,
+    SnowComponent
   ],
   imports: [
     RouterModule.forRoot(
