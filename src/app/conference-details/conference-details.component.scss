@@ -3,18 +3,30 @@
     font-weight: bold;
 }
 
+
+table {
+    font-size: medium;
+    color: blue;
+
+
+}
+
 table a {
     text-decoration: none;
     color: grey;
 }
 
-mat-icon {
-    font-size: 100%;
-}
+// mat-icon {
+//     font-size: 50%;
+// }
 
 pre {
-    width: 70%;
+    width: 95%;
+    margin-left: 10%;
+    margin-right: auto;
     background: radial-gradient( circle, transparent 50%, white 150%),#F5F5F5;
+
+
 
     white-space: pre-wrap;       /* css-3 */
     white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */

@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { CFPData } from './home/home.component';
-import { identifierModuleUrl } from '@angular/compiler';
+// import { identifierModuleUrl } from '@angular/compiler';
 import { CfpdetailsComponent } from './cfpdetails/cfpdetails.component';
 
 const httpOptions = {
@@ -30,12 +30,12 @@ export class CfptimeService {
     return this.http.get<CFPData[]>(tmpUrl);
   }
 
-  getCFPDetails(cfpId: number): Observable<CFPData>{
+  getCFPDetails(cfpId: number): Observable<CFPData> {
     var tmpUrl = this.url + '/api/cfps/' + cfpId + '/';
     return this.http.get<CFPData>(tmpUrl);
   }
 
-  getConferenceDetails(cfpId: number): Observable<CFPData>{
+  getConferenceDetails(cfpId: number): Observable<CFPData> {
     var tmpUrl = this.url + '/api/conferences/' + cfpId + '/';
     return this.http.get<CFPData>(tmpUrl);
   }

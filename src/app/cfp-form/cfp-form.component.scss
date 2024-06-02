@@ -3,11 +3,18 @@ mat-form-field.mat-form-field {
     // margin-right: auto;
     font-size: 16px;
     color: grey;
-    width: 80%;
+    width: 120%;
     // background-color: burlywood;
     // border: solid 1px #c0c0ff;
 }
 
+mat-form-field {
+    min-width: 60%;
+}
+
+div.mat-mdc-form-field-infix {
+    width: 300% !important;
+}
 
 .container {
     margin-left: auto;

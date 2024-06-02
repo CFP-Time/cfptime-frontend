@@ -97,6 +97,6 @@ const appRoutes: Routes = [
   ],
   providers: [SubmitDialogComponent, ErrorDialogComponent, SponsorDialogComponent, CfpNotFoundDialogComponent],
   bootstrap: [AppComponent],
-  entryComponents: [CfpFormComponent, SubmitDialogComponent, ErrorDialogComponent, SponsorDialogComponent, CfpNotFoundDialogComponent]
+  // entryComponents: [CfpFormComponent, SubmitDialogComponent, ErrorDialogComponent, SponsorDialogComponent, CfpNotFoundDialogComponent]
 })
 export class AppModule { }

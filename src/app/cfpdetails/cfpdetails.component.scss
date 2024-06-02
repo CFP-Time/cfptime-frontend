@@ -1,11 +1,15 @@
-.key {
-    color: grey;
-    font-weight: bold;
-}
+table {
+    .key {
+        color: grey;
+        font-weight: bold;
+    }
+    font-size: medium;
+    color: black;
 
-table a {
-    text-decoration: none;
-    color: grey;
+    a {
+        text-decoration: none;
+        color: grey;
+    }
 }
 
 mat-icon {
@@ -13,8 +17,10 @@ mat-icon {
 }
 
 pre {
-    width: 70%;
+    width: 95%;
+
     background: radial-gradient( circle, transparent 50%, white 150%),#F5F5F5;
+    font-size: medium;
 
     white-space: pre-wrap;       /* css-3 */
     white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
@@ -23,6 +29,18 @@ pre {
     word-wrap: break-word;       /* Internet Explorer 5.5+ */
 }
 
-mat-card-content {
-    margin-left: 50px;
+// mat-card-content {
+//     margin-left: 10%;
+//     margin-right: auto;
+// }
+
+mat-card-header {
+    // margin-left: -3%;
+    // margin-right: auto;    
+}
+
+mat-card {
+    // margin-left: 10%;
+    min-width: 95%;
+    margin-right: auto;
 }
