@@ -27,10 +27,9 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-      - name: npm ci and npm run build
+      - name: npm run build
         run: |
-          npm ci
-          (echo y; echo y; echo y; echo y;) | sudo npm install -g @angular/cli
+          sudo npm install -g @angular/cli
           npm run build --prod --outputHashing=none --optimization=false
 
       - name: Copy folder content recursively to remote
