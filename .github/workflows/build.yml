@@ -29,7 +29,8 @@ jobs:
 
       - name: npm run build
         run: |
-          sudo npm install -g @angular/cli
+          npm ci
+          (echo y; echo y; echo y; echo y;) | sudo npm install -g @angular/cli
           npm run build --prod --outputHashing=none --optimization=false
 
       - name: Copy folder content recursively to remote
