@@ -9,6 +9,6 @@ import { Title } from '@angular/platform-browser';
 export class AppComponent {
 
   constructor(private titleService: Title) {
-    this.titleService.setTitle('CFP Time');
-  } 
+    this.titleService.setTitle('CFP Time - Indexing Security Call For Papers for Conferences and Workshops');
+  }
 }
