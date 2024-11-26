@@ -21,29 +21,11 @@
         rel="noopener"><mat-icon>rss_feed</mat-icon>&nbsp;RSS Feed</a>
       <a mat-button href="https://api.cfptime.org/calendars" target="_blank"
         rel="noopener"><mat-icon>bookmark</mat-icon>&nbsp;Get your calendars!</a>
-      <a mat-button href="https://api.cfptime.org" target="_blank" rel="noopener">API</a>
-      <a mat-button href="https://twitter.com/cfp_time" target="_blank" rel="noopener">Follow us on</a>
-      <a aria-label="CFP Time on twitter" target="_blank" rel="noopener" href="https://twitter.com/cfp_time"
-        title="Twitter">
-        <svg id="twitter-logo" height="24" data-name="Logo — FIXED" xmlns="http://www.w3.org/2000/svg"
-          viewBox="90 -110 400 400">
-          <defs>
-            <style>
-              .cls-1 {
-                fill: none;
-              }
+      <a mat-button href="https://api.cfptime.org" target="_blank"
+        rel="noopener"><mat-icon>code</mat-icon>&nbsp;&nbsp;API</a>
 
-              .cls-2 {
-                fill: #ffffff;
-              }
-            </style>
-          </defs>
-          <rect class="cls-1" width="400" height="400" />
-          <path class="cls-2"
-            d="M153.62,301.59c94.34,0,145.94-78.16,145.94-145.94,0-2.22,0-4.43-.15-6.63A104.36,104.36,0,0,0,325,122.47a102.38,102.38,0,0,1-29.46,8.07,51.47,51.47,0,0,0,22.55-28.37,102.79,102.79,0,0,1-32.57,12.45,51.34,51.34,0,0,0-87.41,46.78A145.62,145.62,0,0,1,92.4,107.81a51.33,51.33,0,0,0,15.88,68.47A50.91,50.91,0,0,1,85,169.86c0,.21,0,.43,0,.65a51.31,51.31,0,0,0,41.15,50.28,51.21,51.21,0,0,1-23.16.88,51.35,51.35,0,0,0,47.92,35.62,102.92,102.92,0,0,1-63.7,22A104.41,104.41,0,0,1,75,278.55a145.21,145.21,0,0,0,78.62,23" />
-        </svg>
-      </a>
-      <a mat-button rel="me" href="https://infosec.exchange/@cfp_time" target="_blank" rel="noopener">and Mastodon!</a>
+      <!-- <a mat-button href="https://twitter.com/cfp_time" target="_blank" rel="noopener">Follow us on</a> -->
+      <!-- <a mat-button rel="me" href="https://infosec.exchange/@cfp_time" target="_blank" rel="noopener">and Mastodon!</a> -->
       <!-- <mat-slide-toggle style="font-size: 70%;">Night mode</mat-slide-toggle> -->
     </div>
 
@@ -51,20 +33,46 @@
   <mat-sidenav-container fxFlexFill class="example-container">
 
     <mat-sidenav color="primary" #sidenav fxLayout="column" mode="over" opened="false" fxHide.gt-sm="true">
-      <div fxLayout="column">
+      <div fxLayout="column" fxLayoutAlign="start start" class="text-left">
         <a mat-button routerLink="/home" routerLinkActive="active">Home</a>
         <a mat-button href="https://ko-fi.com/U6U5DE89" target="_blank" rel="noopener"
           style="color: gold;"><mat-icon>grade</mat-icon>&nbsp;&nbsp;Support us!</a>
         <a mat-button routerLink="/add"><mat-icon>add_to_queue</mat-icon>&nbsp;&nbsp;Submit a conference</a>
         <a mat-button routerLink="/upcoming"><mat-icon>calendar_today</mat-icon>&nbsp;&nbsp;Upcoming Conferences</a>
         <a mat-button href="https://api.cfptime.org/rss" target="_blank"
-          rel="noopener"><mat-icon>rss</mat-icon>&nbsp;RSS Feed</a>
+          rel="noopener"><mat-icon>rss_feed</mat-icon>&nbsp;RSS Feed</a>
         <a mat-button href="https://api.cfptime.org/calendars" target="_blank"
           rel="noopener"><mat-icon>bookmark</mat-icon>&nbsp;Get your calendars!</a>
-        <a mat-button href="https://api.cfptime.org" target="_blank" rel="noopener">API</a>
+        <a mat-button href="https://api.cfptime.org" target="_blank"
+          rel="noopener"><mat-icon>code</mat-icon>&nbsp;&nbsp;API</a>
         <a mat-button href="https://api.cfptime.org/calendars"><mat-icon>calendar_today</mat-icon>&nbsp;Get your
           calendars!</a>
-        <a mat-button href="https://twitter.com/cfp_time">Follow us on Twitter :)</a>
+        <a mat-button href="https://twitter.com/cfp_time"><a aria-label="CFP Time on twitter" target="_blank"
+            rel="noopener" href="https://twitter.com/cfp_time" title="Twitter">
+            <svg id="twitter-logo" height="24" data-name="Logo — FIXED" xmlns="http://www.w3.org/2000/svg"
+              viewBox="90 -110 400 400">
+              <defs>
+                <style>
+                  .cls-1 {
+                    fill: none;
+                  }
+
+                  .cls-2 {
+                    fill: black;
+                  }
+                </style>
+              </defs>
+              <rect class="cls-1" width="400" height="400" />
+              <path class="cls-2"
+                d="M153.62,301.59c94.34,0,145.94-78.16,145.94-145.94,0-2.22,0-4.43-.15-6.63A104.36,104.36,0,0,0,325,122.47a102.38,102.38,0,0,1-29.46,8.07,51.47,51.47,0,0,0,22.55-28.37,102.79,102.79,0,0,1-32.57,12.45,51.34,51.34,0,0,0-87.41,46.78A145.62,145.62,0,0,1,92.4,107.81a51.33,51.33,0,0,0,15.88,68.47A50.91,50.91,0,0,1,85,169.86c0,.21,0,.43,0,.65a51.31,51.31,0,0,0,41.15,50.28,51.21,51.21,0,0,1-23.16.88,51.35,51.35,0,0,0,47.92,35.62,102.92,102.92,0,0,1-63.7,22A104.41,104.41,0,0,1,75,278.55a145.21,145.21,0,0,0,78.62,23" />
+            </svg>
+          </a> Follow us on Twitter</a>
+        <a mat-button href="https://twitter.com/cfp_time"><a href="https://infosec.exchange/@cfp_time" title="Mastodon"
+            target="_blank" rel="noopener"><svg id="mastodon-logo" fill="black" height="24" viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg" xml:space="preserve">
+              <path
+                d="M21.327 8.566c0-4.339-2.843-5.61-2.843-5.61-1.433-.658-3.894-.935-6.451-.956h-.063c-2.557.021-5.016.298-6.45.956 0 0-2.843 1.272-2.843 5.61 0 .993-.019 2.181.012 3.441.103 4.243.778 8.425 4.701 9.463 1.809.479 3.362.579 4.612.51 2.268-.126 3.541-.809 3.541-.809l-.075-1.646s-1.621.511-3.441.449c-1.804-.062-3.707-.194-3.999-2.409a4.523 4.523 0 0 1-.04-.621s1.77.433 4.014.536c1.372.063 2.658-.08 3.965-.236 2.506-.299 4.688-1.843 4.962-3.254.434-2.223.398-5.424.398-5.424zm-3.353 5.59h-2.081V9.057c0-1.075-.452-1.62-1.357-1.62-1 0-1.501.647-1.501 1.927v2.791h-2.069V9.364c0-1.28-.501-1.927-1.502-1.927-.905 0-1.357.546-1.357 1.62v5.099H6.026V8.903c0-1.074.273-1.927.823-2.558.566-.631 1.307-.955 2.228-.955 1.065 0 1.872.409 2.405 1.228l.518.869.519-.869c.533-.819 1.34-1.228 2.405-1.228.92 0 1.662.324 2.228.955.549.631.822 1.484.822 2.558v5.253z" />
+            </svg></a>And Mastodon</a>
       </div>
     </mat-sidenav>
     <mat-sidenav-content fxFlexFill>
@@ -75,8 +83,33 @@
 
 <br />
 
-<footer class="md-padding">
+<footer>
   <div id="btmFooter" flex>
-    <p>Made with <mat-icon>favorite</mat-icon> in Clermont-Ferrand.</p>
+    <p>Made with <mat-icon>favorite</mat-icon> in Clermont-Ferrand. You can follow us on:&nbsp;&nbsp;<a
+        aria-label="CFP Time on twitter" target="_blank" rel="noopener" href="https://twitter.com/cfp_time"
+        title="Twitter">
+        <svg id="twitter-logo" height="24" data-name="Logo — FIXED" xmlns="http://www.w3.org/2000/svg"
+          viewBox="90 -110 400 400">
+          <defs>
+            <style>
+              .cls-1 {
+                fill: none;
+              }
+
+              .cls-2 {
+                fill: black;
+              }
+            </style>
+          </defs>
+          <rect class="cls-1" width="400" height="400" />
+          <path class="cls-2"
+            d="M153.62,301.59c94.34,0,145.94-78.16,145.94-145.94,0-2.22,0-4.43-.15-6.63A104.36,104.36,0,0,0,325,122.47a102.38,102.38,0,0,1-29.46,8.07,51.47,51.47,0,0,0,22.55-28.37,102.79,102.79,0,0,1-32.57,12.45,51.34,51.34,0,0,0-87.41,46.78A145.62,145.62,0,0,1,92.4,107.81a51.33,51.33,0,0,0,15.88,68.47A50.91,50.91,0,0,1,85,169.86c0,.21,0,.43,0,.65a51.31,51.31,0,0,0,41.15,50.28,51.21,51.21,0,0,1-23.16.88,51.35,51.35,0,0,0,47.92,35.62,102.92,102.92,0,0,1-63.7,22A104.41,104.41,0,0,1,75,278.55a145.21,145.21,0,0,0,78.62,23" />
+        </svg>
+      </a>and <a href="https://infosec.exchange/@cfp_time" title="Mastodon" target="_blank" rel="noopener"><svg
+          id="mastodon-logo" fill="black" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+          xml:space="preserve">
+          <path
+            d="M21.327 8.566c0-4.339-2.843-5.61-2.843-5.61-1.433-.658-3.894-.935-6.451-.956h-.063c-2.557.021-5.016.298-6.45.956 0 0-2.843 1.272-2.843 5.61 0 .993-.019 2.181.012 3.441.103 4.243.778 8.425 4.701 9.463 1.809.479 3.362.579 4.612.51 2.268-.126 3.541-.809 3.541-.809l-.075-1.646s-1.621.511-3.441.449c-1.804-.062-3.707-.194-3.999-2.409a4.523 4.523 0 0 1-.04-.621s1.77.433 4.014.536c1.372.063 2.658-.08 3.965-.236 2.506-.299 4.688-1.843 4.962-3.254.434-2.223.398-5.424.398-5.424zm-3.353 5.59h-2.081V9.057c0-1.075-.452-1.62-1.357-1.62-1 0-1.501.647-1.501 1.927v2.791h-2.069V9.364c0-1.28-.501-1.927-1.502-1.927-.905 0-1.357.546-1.357 1.62v5.099H6.026V8.903c0-1.074.273-1.927.823-2.558.566-.631 1.307-.955 2.228-.955 1.065 0 1.872.409 2.405 1.228l.518.869.519-.869c.533-.819 1.34-1.228 2.405-1.228.92 0 1.662.324 2.228.955.549.631.822 1.484.822 2.558v5.253z" />
+        </svg></a></p>
   </div>
 </footer>
