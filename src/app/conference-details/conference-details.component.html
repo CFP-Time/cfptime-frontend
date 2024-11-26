@@ -1,34 +1,42 @@
-<div class="container"> 
+<div class="container">
 
     <h3 class="title">Conference details</h3>
     <mat-card class="example-card">
         <mat-card-header>
-          <div mat-card-avatar class="example-header-image"></div>
-          <mat-card-title>{{ details?.name }}</mat-card-title>
-          <mat-card-subtitle>{{ details?.city}}, {{ details?.country }} <span [className]="'flag-icon flag-icon-' + details?.country | lowercase"></span></mat-card-subtitle>
+            <div mat-card-avatar class="example-header-image"></div>
+            <mat-card-title>{{ details?.name }}</mat-card-title>
+            <mat-card-subtitle>🌍 {{ details?.city}}, {{ details?.country }} <span
+                    [className]="'flag-icon flag-icon-' + details?.country | lowercase"></span></mat-card-subtitle>
         </mat-card-header>
         <!-- <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu"> -->
         <mat-card-content>
             <br />
             <table>
                 <tr>
-                    <span class="key">City:</span>&nbsp;&nbsp;{{ details?.city }}
+                    <span class="key">🌍 City:</span>&nbsp;&nbsp;{{ details?.city }}
                 </tr>
                 <tr [hidden]="details?.province == 'N/A'">
-                    <span class="key">Province:</span>&nbsp;&nbsp;{{ details?.province }}
+                    <span class="key">📍 Province:</span>&nbsp;&nbsp;{{ details?.province }}
                 </tr>
                 <tr [hidden]="details?.twitter == 'N/A'">
-                    <span class="key">Twitter:</span>&nbsp;&nbsp;<a href="https://twitter.com/{{ details?.twitter }}" target="_blank" rel="noopener" >{{ details?.twitter }}</a>
+                    <span class="key">📲 Twitter:</span>&nbsp;&nbsp;<a href="https://twitter.com/{{ details?.twitter }}"
+                        target="_blank" rel="noopener">{{ details?.twitter }}</a>
                 </tr>
                 <tr>
-                    <span class="key">Website:</span>&nbsp;&nbsp;&nbsp;<a href="{{ details?.website }}" target="_blank" rel="noopener" >{{ details?.website }}</a>
+                    <span class="key">🌐 Website:</span>&nbsp;&nbsp;&nbsp;<a href="{{ details?.website }}"
+                        target="_blank" rel="noopener">{{ details?.website }}</a>
                 </tr>
-                <tr [hidden]="!details?.code_of_conduct || details?.code_of_conduct == 'N/A' || details?.code_of_conduct == 'Not populated yet'">
-                    <span class="key" >Code of Conduct:</span>&nbsp;&nbsp;<span *ngIf="details?.code_of_conduct.indexOf('http')!=-1; else notShow"><a href="{{ details?.code_of_conduct }}">{{ details?.code_of_conduct }}</a></span>
-                    <ng-template #notShow>{{ details?.code_of_conduct }}</ng-template> 
+                <tr
+                    [hidden]="!details?.code_of_conduct || details?.code_of_conduct == 'N/A' || details?.code_of_conduct == 'Not populated yet'">
+                    <span class="key">😊 Code of Conduct:</span>&nbsp;&nbsp;<span
+                        *ngIf="details?.code_of_conduct.indexOf('http')!=-1; else notShow"><a
+                            href="{{ details?.code_of_conduct }}">{{ details?.code_of_conduct }}</a></span>
+                    <ng-template #notShow>{{ details?.code_of_conduct }}</ng-template>
                 </tr>
                 <tr>
-                    <span class="key">Conference Date:</span>&nbsp;&nbsp;<a href="https://api.cfptime.org/calendar/conference/{{ details?.id}}">{{ details?.conf_start_date | date:'medium' }}&nbsp;<mat-icon>calendar_today</mat-icon></a>
+                    <span class="key">📆 Conference Date:</span>&nbsp;&nbsp;<a
+                        href="https://api.cfptime.org/calendar/conference/{{ details?.id}}">{{ details?.conf_start_date
+                        | date:'medium' }}&nbsp;<mat-icon>calendar_today</mat-icon></a>
                 </tr>
             </table>
         </mat-card-content>
@@ -36,5 +44,5 @@
           <button mat-button>LIKE</button>
           <button mat-button>SHARE</button>
         </mat-card-actions> -->
-      </mat-card>
+    </mat-card>
 </div>
