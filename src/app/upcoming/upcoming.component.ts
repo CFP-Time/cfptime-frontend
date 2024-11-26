@@ -11,9 +11,10 @@ export interface CFPData {
 }
 
 @Component({
-  selector: 'app-upcoming',
-  templateUrl: './upcoming.component.html',
-  styleUrls: ['./upcoming.component.scss']
+    selector: 'app-upcoming',
+    templateUrl: './upcoming.component.html',
+    styleUrls: ['./upcoming.component.scss'],
+    standalone: false
 })
 export class UpcomingComponent implements OnInit {
 

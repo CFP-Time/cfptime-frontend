@@ -6,9 +6,10 @@ import { SponsorDialogComponent } from '../sponsor-dialog/sponsor-dialog.compone
 import { CfpNotFoundDialogComponent } from '../cfp-not-found-dialog/cfp-not-found-dialog.component';
 
 @Component({
-  selector: 'app-cfpdetails',
-  templateUrl: './cfpdetails.component.html',
-  styleUrls: ['./cfpdetails.component.scss']
+    selector: 'app-cfpdetails',
+    templateUrl: './cfpdetails.component.html',
+    styleUrls: ['./cfpdetails.component.scss'],
+    standalone: false
 })
 export class CfpdetailsComponent implements OnInit {
 

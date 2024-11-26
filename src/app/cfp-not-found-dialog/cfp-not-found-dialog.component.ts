@@ -2,9 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 
 @Component({
-  selector: 'app-cfp-not-found-dialog',
-  templateUrl: './cfp-not-found-dialog.component.html',
-  styleUrls: ['./cfp-not-found-dialog.component.scss']
+    selector: 'app-cfp-not-found-dialog',
+    templateUrl: './cfp-not-found-dialog.component.html',
+    styleUrls: ['./cfp-not-found-dialog.component.scss'],
+    standalone: false
 })
 export class CfpNotFoundDialogComponent implements OnInit {
   constructor(public dialog: MatDialog) { }

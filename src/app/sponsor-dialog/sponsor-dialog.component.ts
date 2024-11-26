@@ -2,9 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 
 @Component({
-  selector: 'app-sponsor-dialog',
-  templateUrl: './sponsor-dialog.component.html',
-  styleUrls: ['./sponsor-dialog.component.scss']
+    selector: 'app-sponsor-dialog',
+    templateUrl: './sponsor-dialog.component.html',
+    styleUrls: ['./sponsor-dialog.component.scss'],
+    standalone: false
 })
 export class SponsorDialogComponent implements OnInit {
   constructor(public dialog: MatDialog) { }

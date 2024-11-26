@@ -21,7 +21,7 @@
     <ng-container matColumnDef="country">
       <th mat-header-cell *matHeaderCellDef mat-sort-header> Country </th>
       <td mat-cell *matCellDef="let element"> {{element.country}} <span
-          [className]="'flag-icon flag-icon-' + element.country | lowercase"></span></td>
+          [className]="'fi fi-' + element.country | lowercase"></span></td>
     </ng-container>
 
     <ng-container matColumnDef="cfp_deadline">

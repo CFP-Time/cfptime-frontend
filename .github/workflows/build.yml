@@ -13,7 +13,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v1
-
       - name: Cache node modules
         uses: actions/cache@v1
         with:
@@ -35,7 +34,7 @@ jobs:
 
       # Step 5: Create a zip archive of the dist folder
       - name: Create zip of dist folder
-        run: zip -j -r dist.zip dist/cfptime-frontend/
+        run: cd dist/cfptime-frontend/browser/ && zip -r dist.zip . && mv dist.zip ../../../
 
       # Step 6: Deploy to remote server
       - name: Deploy to remote server

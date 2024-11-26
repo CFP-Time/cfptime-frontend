@@ -4,9 +4,10 @@ import { CfptimeService } from '../cfptime.service';
 import { CFPData } from '../home/home.component';
 
 @Component({
-  selector: 'app-conference-details',
-  templateUrl: './conference-details.component.html',
-  styleUrls: ['./conference-details.component.scss']
+    selector: 'app-conference-details',
+    templateUrl: './conference-details.component.html',
+    styleUrls: ['./conference-details.component.scss'],
+    standalone: false
 })
 export class ConferenceDetailsComponent implements OnInit {
 

@@ -8,9 +8,10 @@ import { SubmitDialogComponent } from '../submit-dialog/submit-dialog.component'
 import { ErrorDialogComponent } from '../error-dialog/error-dialog.component';
 
 @Component({
-  selector: 'app-cfp-form',
-  templateUrl: './cfp-form.component.html',
-  styleUrls: ['./cfp-form.component.scss']
+    selector: 'app-cfp-form',
+    templateUrl: './cfp-form.component.html',
+    styleUrls: ['./cfp-form.component.scss'],
+    standalone: false
 })
 
 export class CfpFormComponent implements OnInit {
