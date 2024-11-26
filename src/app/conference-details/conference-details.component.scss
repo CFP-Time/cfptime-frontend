@@ -1,19 +1,20 @@
-.key {
-    color: grey;
-    font-weight: bold;
-}
-
-
 table {
+    .key {
+        color: grey;
+        font-weight: bold;
+    }
+
     font-size: medium;
-    color: blue;
+    color: black;
 
+    a {
+        text-decoration: none;
+        color: grey;
+    }
 
-}
-
-table a {
-    text-decoration: none;
-    color: grey;
+    .value {
+        color: grey;
+    }
 }
 
 // mat-icon {
@@ -24,15 +25,20 @@ pre {
     width: 95%;
     margin-left: 10%;
     margin-right: auto;
-    background: radial-gradient( circle, transparent 50%, white 150%),#F5F5F5;
+    background: radial-gradient(circle, transparent 50%, white 150%), #F5F5F5;
 
 
 
-    white-space: pre-wrap;       /* css-3 */
-    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
-    white-space: -pre-wrap;      /* Opera 4-6 */
-    white-space: -o-pre-wrap;    /* Opera 7 */
-    word-wrap: break-word;       /* Internet Explorer 5.5+ */
+    white-space: pre-wrap;
+    /* css-3 */
+    white-space: -moz-pre-wrap;
+    /* Mozilla, since 1999 */
+    white-space: -pre-wrap;
+    /* Opera 4-6 */
+    white-space: -o-pre-wrap;
+    /* Opera 7 */
+    word-wrap: break-word;
+    /* Internet Explorer 5.5+ */
 }
 
 mat-card-content {
@@ -40,5 +46,60 @@ mat-card-content {
 }
 
 .title {
-    margin-left: 10%;
+    // margin-left: 10%;
+    margin: 10px;
+}
+
+
+.details-table {
+    // width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    table-layout: auto;
+}
+
+.details-table td {
+    padding: 8px 12px;
+    vertical-align: top;
+}
+
+.details-table .key {
+    font-weight: bold;
+    text-align: right;
+    /* Ensures right alignment of labels */
+    white-space: nowrap;
+    /* Prevents labels from wrapping */
+    width: 20%;
+    /* Consistent width for the first column */
+}
+
+.details-table .value {
+    text-align: left;
+    /* Ensures left alignment of content */
+    word-wrap: break-word;
+    /* Allows content to wrap if necessary */
+}
+
+.details-table tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+.details-table tr:nth-child(even) {
+    background-color: #ffffff;
+}
+
+.details-table a {
+    // color: #007bff;
+    text-decoration: none;
+}
+
+.details-table a:hover {
+    text-decoration: underline;
+}
+
+.details-table mat-icon {
+    font-size: 18px;
+    vertical-align: middle;
 }
