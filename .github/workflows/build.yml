@@ -33,12 +33,41 @@ jobs:
           (echo y; echo y; echo y; echo y;) | sudo npm install -g @angular/cli
           npm run build --prod --outputHashing=none --optimization=false
 
-      - name: Copy folder content recursively to remote
-        uses: garygrossgarten/github-action-scp@release
+      # Step 5: Create a zip archive of the dist folder
+      - name: Create zip of dist folder
+        run: zip -j -r dist.zip dist/cfptime-frontend/
+
+      # Step 6: Deploy to remote server
+      - name: Deploy to remote server
+        uses: appleboy/scp-action@v0.1.7
         with:
-          local: dist/cfptime-frontend
-          remote: ${{ secrets.SSH_PATH }}
           host: ${{ secrets.SERVER }}
-          port: ${{ secrets.SSH_PORT }}
           username: ${{ secrets.SSH_USER }}
-          privateKey: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: ${{ secrets.SSH_PORT }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          source: "dist.zip"
+          target: "~/"
+
+      # Step 7: SSH into remote host and unzip
+      - name: SSH and unzip
+        uses: appleboy/ssh-action@v1.2.0
+        with:
+          host: ${{ secrets.SERVER }}
+          username: ${{ secrets.SSH_USER }}
+          port: ${{ secrets.SSH_PORT }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            rm -Rf ${{ secrets.REMOTE_PATH }}
+            mkdir ${{ secrets.REMOTE_PATH }}
+            unzip -o ~/dist.zip -d ${{ secrets.REMOTE_PATH }}
+            rm ~/dist.zip
+
+      # - name: Copy folder content recursively to remote
+      #   uses: garygrossgarten/github-action-scp@release
+      #   with:
+      #     local: dist.zip
+      #     remote: ${{ secrets.SSH_PATH }}
+      #     host: ${{ secrets.SERVER }}
+      #     port: ${{ secrets.SSH_PORT }}
+      #     username: ${{ secrets.SSH_USER }}
+      #     privateKey: ${{ secrets.SSH_PRIVATE_KEY }}
