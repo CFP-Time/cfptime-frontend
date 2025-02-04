@@ -19,67 +19,43 @@ mat-icon {
 
 pre {
     width: auto;
-
     background: radial-gradient(circle, transparent 50%, white 150%), #F5F5F5;
     font-size: medium;
-
     white-space: pre-wrap;
-    /* css-3 */
     white-space: -moz-pre-wrap;
-    /* Mozilla, since 1999 */
     white-space: -pre-wrap;
-    /* Opera 4-6 */
     white-space: -o-pre-wrap;
-    /* Opera 7 */
     word-wrap: break-word;
-    /* Internet Explorer 5.5+ */
-}
-
-// mat-card-content {
-//     margin-left: 10%;
-//     margin-right: auto;
-// }
-
-mat-card-header {
-    // margin-left: -3%;
-    // margin-right: auto;    
-}
-
-mat-card {
-    // margin-left: 10%;
-    min-width: 95%;
-    margin-right: auto;
 }
 
 .details-table {
-    // width: 100%;
+    max-width: auto;
     border-collapse: collapse;
-    margin: 20px 0;
     font-size: 16px;
     font-family: Arial, sans-serif;
     table-layout: auto;
+    padding: 0 10px;
 }
 
 .details-table td {
     padding: 8px 12px;
     vertical-align: top;
+    word-wrap: break-word;
+    word-break: break-all;
 }
 
 .details-table .key {
     font-weight: bold;
     text-align: right;
-    /* Ensures right alignment of labels */
     white-space: nowrap;
-    /* Prevents labels from wrapping */
     width: 20%;
-    /* Consistent width for the first column */
 }
 
 .details-table .value {
     text-align: left;
-    /* Ensures left alignment of content */
     word-wrap: break-word;
-    /* Allows content to wrap if necessary */
+    word-wrap: break-word;
+    word-break: break-all;
 }
 
 .details-table tr:nth-child(odd) {
@@ -91,7 +67,6 @@ mat-card {
 }
 
 .details-table a {
-    // color: #007bff;
     text-decoration: none;
 }
 
